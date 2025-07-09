@@ -46,7 +46,7 @@ def convert_kelvin_to_celsius():
     print(f"{temperature} K is {result:.2f}°C")
 
 
-def convert_fahrenheit_to_celsius():
+def convert_fahrenheit_to_kelvin():
     temperature = float(input("Enter temperature in Fahrenheit: "))
     result = fahrenheit_to_kelvin(temperature)
     print(f"{temperature}°F is {result:.2f} K")
@@ -62,14 +62,26 @@ def main():
     print("Welcome to the Temperature Converter!")
     print("1. Celsius to Fahrenheit")
     print("2. Fahrenheit to Celsius")
-    choice = input("Choose an option (1 or 2): ")
+    print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
+    print("5. Fahrenheit to Kelvin")
+    print("6. Kelvin to Fahrenheit")
+    choice = input("Choose an option (1-6): ")
 
     if choice == "1":
         convert_celsius_to_fahrenheit()
     elif choice == "2":
         convert_fahrenheit_to_celsius()
+    elif choice == "3":
+        convert_celsius_to_kelvin()
+    elif choice == "4":
+        convert_kelvin_to_celsius()
+    elif choice == "5":
+        convert_fahrenheit_to_kelvin()
+    elif choice == "6":
+        convert_kelvin_to_fahrenheit()
     else:
-        print("Invalid choice. Please enter 1 or 2.")
+        print("Invalid choice. Please enter a number between 1 and 6.")
 
 
 if __name__ == "__main__":
