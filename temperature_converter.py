@@ -12,8 +12,10 @@ def convert_celsius_to_fahrenheit():
     print(f"{temp}°C is {result:.2f}°F")
 
 
-
-
+def convert_fahrenheit_to_celsius():
+    temperature = float(input("Enter temperature in Fahrenheit: "))
+    result = fahrenheit_to_celsius(temperature)
+    print(f"{temp}°F is {result:.2f}°C")
 
 
 def main():
