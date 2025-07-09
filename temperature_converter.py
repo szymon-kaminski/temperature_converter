@@ -34,6 +34,30 @@ def convert_fahrenheit_to_celsius():
     print(f"{temperature}°F is {result:.2f}°C")
 
 
+def convert_celsius_to_kelvin():
+    temperature = float(input("Enter temperature in Celsius: "))
+    result = celsius_to_kelvin(temperature)
+    print(f"{temperature}°C is {result:.2f} K")
+
+
+def convert_kelvin_to_celsius():
+    temperature = float(input("Enter temperature in Kelvin: "))
+    result = kelvin_to_celsius(temperature)
+    print(f"{temperature} K is {result:.2f}°C")
+
+
+def convert_fahrenheit_to_celsius():
+    temperature = float(input("Enter temperature in Fahrenheit: "))
+    result = fahrenheit_to_kelvin(temperature)
+    print(f"{temperature}°F is {result:.2f} K")
+   
+
+def convert_kelvin_to_fahrenheit():    
+    temperature = float(input("Enter temperature in Kelvin: "))
+    result = kelvin_to_fahrenheit(temperature)
+    print(f"{temperature} K is {result:.2f}°F")
+
+
 def main():
     print("Welcome to the Temperature Converter!")
     print("1. Celsius to Fahrenheit")
