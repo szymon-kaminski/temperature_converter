@@ -60,28 +60,35 @@ def convert_kelvin_to_fahrenheit():
 
 def main():
     print("Welcome to the Temperature Converter!")
-    print("1. Celsius to Fahrenheit")
-    print("2. Fahrenheit to Celsius")
-    print("3. Celsius to Kelvin")
-    print("4. Kelvin to Celsius")
-    print("5. Fahrenheit to Kelvin")
-    print("6. Kelvin to Fahrenheit")
-    choice = input("Choose an option (1-6): ")
 
-    if choice == "1":
-        convert_celsius_to_fahrenheit()
-    elif choice == "2":
-        convert_fahrenheit_to_celsius()
-    elif choice == "3":
-        convert_celsius_to_kelvin()
-    elif choice == "4":
-        convert_kelvin_to_celsius()
-    elif choice == "5":
-        convert_fahrenheit_to_kelvin()
-    elif choice == "6":
-        convert_kelvin_to_fahrenheit()
-    else:
-        print("Invalid choice. Please enter a number between 1 and 6.")
+    while True:
+        print("\nWhat would you like to convert?")
+        print("1. Celsius to Fahrenheit")
+        print("2. Fahrenheit to Celsius")
+        print("3. Celsius to Kelvin")
+        print("4. Kelvin to Celsius")
+        print("5. Fahrenheit to Kelvin")
+        print("6. Kelvin to Fahrenheit")
+        choice = input("Choose an option (1-6): ")
+
+        if choice == "1":
+            convert_celsius_to_fahrenheit()
+        elif choice == "2":
+            convert_fahrenheit_to_celsius()
+        elif choice == "3":
+            convert_celsius_to_kelvin()
+        elif choice == "4":
+            convert_kelvin_to_celsius()
+        elif choice == "5":
+            convert_fahrenheit_to_kelvin()
+        elif choice == "6":
+            convert_kelvin_to_fahrenheit()
+        else:
+            print("Invalid choice. Please enter a number between 1 and 6.")
+        again = input("\nWuld you like to convert another temperature? (y/n): ").lower()
+        if again != "y":
+            print("Goodbye!")
+            break
 
 
 if __name__ == "__main__":
