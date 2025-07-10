@@ -23,9 +23,12 @@ def kelvin_to_fahrenheit(kelvin):
 
 
 def convert_celsius_to_fahrenheit():
-    temperature = float(input("Enter temperature in Celsius: "))
-    result = celsius_to_fahrenheit(temperature)
-    print(f"{temperature}°C is {result:.2f}°F")
+    try:    
+        temperature = float(input("Enter temperature in Celsius: "))
+        result = celsius_to_fahrenheit(temperature)
+        print(f"{temperature}°C is {result:.2f}°F")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
 
 def convert_fahrenheit_to_celsius():
