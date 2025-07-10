@@ -32,34 +32,49 @@ def convert_celsius_to_fahrenheit():
 
 
 def convert_fahrenheit_to_celsius():
-    temperature = float(input("Enter temperature in Fahrenheit: "))
-    result = fahrenheit_to_celsius(temperature)
-    print(f"{temperature}°F is {result:.2f}°C")
+    try:
+        temperature = float(input("Enter temperature in Fahrenheit: "))
+        result = fahrenheit_to_celsius(temperature)
+        print(f"{temperature}°F is {result:.2f}°C")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
 
 def convert_celsius_to_kelvin():
-    temperature = float(input("Enter temperature in Celsius: "))
-    result = celsius_to_kelvin(temperature)
-    print(f"{temperature}°C is {result:.2f} K")
+    try:    
+        temperature = float(input("Enter temperature in Celsius: "))
+        result = celsius_to_kelvin(temperature)
+        print(f"{temperature}°C is {result:.2f} K")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
 
 def convert_kelvin_to_celsius():
-    temperature = float(input("Enter temperature in Kelvin: "))
-    result = kelvin_to_celsius(temperature)
-    print(f"{temperature} K is {result:.2f}°C")
+    try:
+        temperature = float(input("Enter temperature in Kelvin: "))
+        result = kelvin_to_celsius(temperature)
+        print(f"{temperature} K is {result:.2f}°C")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
 
 def convert_fahrenheit_to_kelvin():
-    temperature = float(input("Enter temperature in Fahrenheit: "))
-    result = fahrenheit_to_kelvin(temperature)
-    print(f"{temperature}°F is {result:.2f} K")
-   
+    try:
+        temperature = float(input("Enter temperature in Fahrenheit: "))
+        result = fahrenheit_to_kelvin(temperature)
+        print(f"{temperature}°F is {result:.2f} K")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
-def convert_kelvin_to_fahrenheit():    
-    temperature = float(input("Enter temperature in Kelvin: "))
-    result = kelvin_to_fahrenheit(temperature)
-    print(f"{temperature} K is {result:.2f}°F")
 
+def convert_kelvin_to_fahrenheit():
+    try:    
+        temperature = float(input("Enter temperature in Kelvin: "))
+        result = kelvin_to_fahrenheit(temperature)
+        print(f"{temperature} K is {result:.2f}°F")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
+        
 
 def main():
     print("Welcome to the Temperature Converter!")
