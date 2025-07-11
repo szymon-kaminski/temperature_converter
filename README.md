@@ -23,3 +23,12 @@ Welcome to the Temperature Converter!
 Choose an option (1-6): 1
 Enter temperature in Celsius: 100
 100.0°C is 212.00°F
+
+
+## Project Structure
+
+temperature_converter/
+├── temperature_converter.py # Main script with conversion logic
+├── test_temperature_converter.py # Unit tests for conversion functions
+├── README.md # Project documentation
+└── .gitignore # Files and folders ignored by Git
