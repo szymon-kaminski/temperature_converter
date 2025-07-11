@@ -7,7 +7,12 @@ from temperature_converter import (
     kelvin_to_celsius,
     fahrenheit_to_kelvin,
     kelvin_to_fahrenheit,
+    convert_celsius_to_fahrenheit,
+    convert_fahrenheit_to_celsius,
 )
+
+from unittest.mock import patch
+
 
 def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(0) == 32
@@ -39,3 +44,17 @@ def test_fahrenheit_to_kelvin():
 def test_kelvin_to_fahrenheit():
     assert round(kelvin_to_fahrenheit(273.15), 2) == 32.0
     assert round(kelvin_to_fahrenheit(373.15), 2) == 212.0
+
+
+@patch("builtins.input", return_value="0")
+def test_convert_celsius_to_fahrenheit(mock_input, capsys):
+    convert_celsius_to_fahrenheit()
+    captured = capsys.readouterr()
+    assert "0.0°C is 32.00°F" in captured.out
+
+
+@patch("builtins.input", return_value="32")
+def test_convert_fahrenheit_to_celsius(mock_input, capsys):
+    convert_fahrenheit_to_celsius()
+    captured = capsys.readouterr()
+    assert "32.0°F is 0.00°C" in captured.out
