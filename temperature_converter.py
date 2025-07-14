@@ -87,9 +87,13 @@ def main():
         print("4. Kelvin to Celsius")
         print("5. Fahrenheit to Kelvin")
         print("6. Kelvin to Fahrenheit")
-        choice = input("Choose an option (1-6): ")
+        print("Q. Quit")
+        choice = input("Choose an option (1-6 or q for quit): ")
 
-        if choice == "1":
+        if choice.lower() in ["q", "quit", "exit"]:
+            print("Exiting the program. Goodbye!")
+            return
+        elif choice == "1":
             convert_celsius_to_fahrenheit()
         elif choice == "2":
             convert_fahrenheit_to_celsius()
@@ -102,7 +106,7 @@ def main():
         elif choice == "6":
             convert_kelvin_to_fahrenheit()
         else:
-            print("Invalid choice. Please enter a number between 1 and 6.")
+            print("Invalid choice. Please enter a number between 1 and 6 or q to qiut.")
         again = input("\nWuld you like to convert another temperature? (y/n): ").lower()
         if again != "y":
             print("Goodbye!")
