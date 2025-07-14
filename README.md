@@ -10,6 +10,7 @@ Perfect for learning how to build command-line applications, handle user input, 
 
 ```bash
 python temperature_converter.py
+```
 
 EXAMPLE:
 
